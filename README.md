@@ -1,4 +1,4 @@
-# node-oauth2-server with MongoDB example
+# authentication-server with MongoDB example
 
 This is a basic example of a OAuth2 server, using [node-oauth2-server](https://github.com/oauthjs/node-oauth2-server) (version 3.0.1) with MongoDB storage and the minimum (only the required to work) model configuration.
 
@@ -6,9 +6,17 @@ If you want a simpler example without MongoDB storage, you should go to [node-oa
 
 ## Setup
 
-First, you should have [MongoDB](https://www.mongodb.com/) installed and running on your machine.
+First, you need to have Docker install on your machine.
 
-You also need to install **nodejs** and **npm** and then, simply run `npm install` and `npm start`. The server should now be running at `http://localhost:3000`.
+Simple run command `docker-compose up` and the server should now be running at `http://localhost:6000`.
+
+## Ports usage
+
+**6000** - Server port
+
+**6100** - Debug locally port using VSCode
+
+**6200** - MongoDB Docker exposed port
 
 ## Usage
 
