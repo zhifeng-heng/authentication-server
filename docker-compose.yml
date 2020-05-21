@@ -1,0 +1,27 @@
+version: '3'
+services:
+  authentication-server:
+    container_name: authentication-server
+    image: authentication-server
+    depends_on:
+      - authentication-server-mongo
+    build: .
+    command: 'npm run serve:debug'
+    volumes:
+      - ./src:/srv/src/src
+    ports:
+      - '6000:6000'
+      - '6100:6100'
+    # env_file:
+    #   - .env.authentication
+    
+  authentication-server-mongo:
+    container_name: authentication-server-mongo
+    image: mongo:3.6.1
+    ports:
+      - "6200:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

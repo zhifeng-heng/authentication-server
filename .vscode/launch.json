@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach Docker authentication-server",
+      "protocol": "auto",
+      "sourceMaps": true,
+      "port": 6100,
+      "localRoot": "${workspaceRoot}",
+      "remoteRoot": "/srv/src"
+    },
+  ]
+}
